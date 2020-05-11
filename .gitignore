@@ -1,0 +1,7 @@
+# Ignore DB
+*.db
+
+# Folders
+*pycache*/
+entries/*pycache*/
+.git/
