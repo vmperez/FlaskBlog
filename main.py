@@ -9,7 +9,7 @@ from entries.blueprint import entries
 app.register_blueprint(entries, url_prefix='/entries')
 
 def check_db():
-	if ((not os.path.exists('./blog.db') || (os.path.getsize('./blog.db') < 100)):
+	if ((not os.path.exists('./blog.db')) or (os.path.getsize('./blog.db') < 100)):
 		# SQLite database file header is 100 bytes
 		db.create_all()
 	else:
